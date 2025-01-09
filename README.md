@@ -23,7 +23,7 @@ Here are some of the key technologies and tools I work with:
 ## 📫 Get in Touch
 
 - LinkedIn: https://linkedin.com/in/mirsad-halilcevic
-- Twitter: @sixaphone__
+- Twitter: [@sixaphone__](https://x.com/sixaphone__)
 - Email: mirsad@meta5.io
 
 ## 🤝 Contributing
