@@ -13,9 +13,9 @@ const posts = await getCollection("blog", ({ data }) => {
 const sortedPosts = posts.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
 ---
 
-<BaseLayout title="Blog" description="Read my latest blog posts">
+<BaseLayout title="Blog" description="My latests novels">
   <Container>
-    <BaseHero title="Blog" description="Read my latest blog posts" />
+    <BaseHero title="Blog" description="Why not give them a read" />
     <ContentList>
       {
         sortedPosts.map((post) => (

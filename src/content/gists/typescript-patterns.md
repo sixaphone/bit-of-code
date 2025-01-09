@@ -1,7 +1,7 @@
 ---
 title: "Advanced TypeScript Patterns"
 description: "A collection of useful TypeScript patterns and when to use them"
-publishedAt: 2024-01-15
+publishedAt: 2025-01-02
 category: "TypeScript"
 ---
 

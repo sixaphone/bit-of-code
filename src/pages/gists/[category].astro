@@ -7,45 +7,63 @@ import BaseLayout from "../../components/layout/BaseLayout.astro";
 import Categories from "../../components/shared/Categories.astro";
 import BaseHero from "../../components/shared/BaseHero.astro";
 import Container from "../../components/ui/Container.astro";
-type Note = CollectionEntry<"notes">;
+
+type Gist = CollectionEntry<"gists">;
 
 export const getStaticPaths = (async () => {
-  const allNotes = await getCollection("notes");
-  const filteredNotes = allNotes.filter((note: Note) => (import.meta.env.PROD ? !note.data.draft : true));
+  const gists = await getCollection("gists");
+  const filteredGists = gists.filter((gist: Gist) =>
+    import.meta.env.PROD ? !gist.data.draft : true
+  );
 
-  const allCategories: string[] = Array.from(new Set(filteredNotes.map((note: Note) => note.data.category)));
+  const allCategories: string[] = Array.from(
+    new Set(filteredGists.map((note: Gist) => note.data.category))
+  );
 
   return allCategories.map((categoryPath) => {
-    const categoryNotes = filteredNotes.filter((note: Note) => note.data.category === categoryPath);
+    const categoryGists = filteredGists.filter(
+      (note: Gist) => note.data.category === categoryPath
+    );
 
     return {
       params: { category: categoryPath },
-      props: { categoryNotes, allCategories },
+      props: { categoryGists, allCategories },
     };
   });
 }) satisfies GetStaticPaths;
 
-const { categoryNotes, allCategories } = Astro.props;
+const { categoryGists, allCategories } = Astro.props;
 
-const sortedNotes = categoryNotes.sort(
-  (a: Note, b: Note) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+const sortedGists = categoryGists.sort(
+  (a: Gist, b: Gist) =>
+    b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
 );
 ---
 
-<BaseLayout title="Notes" description="Short-form thoughts and learnings">
+<BaseLayout
+  title="Gists"
+  description="Short writeups and methods I want to share with you"
+>
   <main>
     <Container>
-      <BaseHero title="Notes" description="Short-form thoughts and learnings" />
-      <Categories categories={allCategories} currentPath={Astro.url.pathname} basePath="notes" />
+      <BaseHero
+        title="Gists"
+        description="Smaller blog posts or code snippets"
+      />
+      <Categories
+        categories={allCategories}
+        currentPath={Astro.url.pathname}
+        basePath="gists"
+      />
 
       <div class="content-list">
         {
-          sortedNotes.map((note: Note) => (
+          sortedGists.map((gist: Gist) => (
             <ArticleCard
-              title={note.data.title}
-              description={note.data.description}
-              url={`/notes/${note.id}`}
-              date={note.data.publishedAt}
+              title={gist.data.title}
+              description={gist.data.description}
+              url={`/gists/${gist.id}`}
+              date={gist.data.publishedAt}
             />
           ))
         }

@@ -4,15 +4,15 @@ import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../components/layout/BaseLayout.astro";
 
 export const getStaticPaths = (async () => {
-  const notes = await getCollection("notes");
-  return notes.map((note) => ({
-    params: { slug: note.id },
-    props: { note },
+  const gists = await getCollection("gists");
+  return gists.map((gist) => ({
+    params: { slug: gist.id },
+    props: { gist },
   }));
 }) satisfies GetStaticPaths;
 
-const { note } = Astro.props;
-const { Content } = await render(note);
+const { gist } = Astro.props;
+const { Content } = await render(gist);
 
 const formatDate = (date: Date) => {
   return date.toLocaleDateString("en-US", {
@@ -23,16 +23,16 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<BaseLayout title={note.data.title} description={note.data.description}>
+<BaseLayout title={gist.data.title} description={gist.data.description}>
   <main>
-    <article class="note">
+    <article class="gist">
       <header>
         <div class="metadata">
-          <time datetime={note.data.publishedAt.toISOString()}>
-            {formatDate(note.data.publishedAt)}
+          <time datetime={gist.data.publishedAt.toISOString()}>
+            {formatDate(gist.data.publishedAt)}
           </time>
         </div>
-        <h1>{note.data.title}</h1>
+        <h1>{gist.data.title}</h1>
       </header>
       <div class="content">
         <Content />
@@ -49,7 +49,7 @@ const formatDate = (date: Date) => {
     padding: 2rem 1.5rem;
   }
 
-  .note {
+  .gist {
     margin-top: 2rem;
   }
 

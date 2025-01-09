@@ -1,7 +1,7 @@
 ---
 title: "Modern CSS Tricks"
 description: "Useful CSS snippets and modern techniques"
-publishedAt: 2024-01-05
+publishedAt: 2025-01-02
 category: "CSS"
 ---
 

@@ -8,30 +8,40 @@ import BaseHero from "../../components/shared/BaseHero.astro";
 import Container from "../../components/ui/Container.astro";
 import ContentList from "../../components/shared/ContentList.astro";
 
-type Note = CollectionEntry<"notes">;
+type Gist = CollectionEntry<"gists">;
 
-const notes = await getCollection("notes", ({ data }) => {
+const gists = await getCollection("gists", ({ data }) => {
   return import.meta.env.PROD ? !data.draft : true;
 });
 
-const categories = [...new Set(notes.map((note: Note) => note.data.category))];
-const sortedNotes = notes.sort((a: Note, b: Note) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+const categories = [...new Set(gists.map((note: Gist) => note.data.category))];
+const sortedGists = gists.sort(
+  (a: Gist, b: Gist) =>
+    b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+);
 ---
 
-<BaseLayout title="Notes" description="Short-form thoughts and learnings">
+<BaseLayout
+  title="Gists"
+  description="Short writeups and methods I want to share with you"
+>
   <Container>
-    <BaseHero title="Notes" description="Short-form thoughts and learnings" />
+    <BaseHero title="Gists" description="Smaller blog posts or code snippets" />
 
-    <Categories categories={categories} currentPath={Astro.url.pathname} basePath="notes" />
+    <Categories
+      categories={categories}
+      currentPath={Astro.url.pathname}
+      basePath="gists"
+    />
 
     <ContentList>
       {
-        sortedNotes.map((note) => (
+        sortedGists.map((gist) => (
           <ArticleCard
-            title={note.data.title}
-            description={note.data.description}
-            url={`/notes/${note.id}`}
-            date={note.data.publishedAt}
+            title={gist.data.title}
+            description={gist.data.description}
+            url={`/gists/${gist.id}`}
+            date={gist.data.publishedAt}
           />
         ))
       }
