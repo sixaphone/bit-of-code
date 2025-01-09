@@ -10,7 +10,7 @@ export const SITE = {
   title: "Software Engineering & Tinkering",
   description:
     "Personal showcase of software engineering projects, gists, and some writtings.",
-  url: "https://bitofcode.netlify.com",
+  url: "https://bit-of-code.netlify.com",
   defaultImage: "/og-image.png",
 } as const;
 
