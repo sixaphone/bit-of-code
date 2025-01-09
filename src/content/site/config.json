@@ -12,9 +12,9 @@
         "title": "Projects",
         "viewAllText": "View all projects"
       },
-      "experience": {
-        "title": "Experience",
-        "viewAllText": "View full résumé"
+      "gists": {
+        "title": "Gists",
+        "viewAllText": "View all gists"
       }
     },
     "socialLinks": [

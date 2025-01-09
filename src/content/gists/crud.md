@@ -3,6 +3,7 @@ title: "About CRUDs"
 description: "Some terms and explanations for beginners to better understand CRUDs"
 publishedAt: 2025-01-09
 category: "Short Read"
+featured: true
 ---
 
 # Intro

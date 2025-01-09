@@ -3,6 +3,7 @@ title: "Advanced TypeScript Patterns"
 description: "A collection of useful TypeScript patterns and when to use them"
 publishedAt: 2025-01-02
 category: "TypeScript"
+featured: true
 ---
 
 Here are some TypeScript patterns I've found particularly useful:

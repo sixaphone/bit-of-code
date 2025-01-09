@@ -3,6 +3,7 @@ title: "JavaScript multiple inheritance"
 description: "A helper method to allow classes to extend multiple classes at once"
 publishedAt: 2025-01-09
 category: "TypeScript"
+featured: true
 ---
 
 ```typescript
