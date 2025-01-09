@@ -8,13 +8,13 @@
   --font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Roboto Mono", Consolas, "Courier New", monospace;
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 0.75rem;
-  --text-lg: 1rem;
-  --text-xl: 1.125rem;
-  --text-2xl: 1.25rem;
-  --text-3xl: 1.5rem;
+  --text-xs: 1rem;
+  --text-sm: 1.275rem;
+  --text-base: 0.95rem;
+  --text-lg: 2rem;
+  --text-xl: 2.125rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: 2.5rem;
 
   --link-animation-duration: 0.3s;
 }

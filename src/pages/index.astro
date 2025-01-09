@@ -25,11 +25,11 @@ const posts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) =>
   return import.meta.env.PROD ? !data.draft : true;
 });
 const latestPosts = posts
+  .slice(0, 3)
   .sort(
     (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
       b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
-  )
-  .slice(0, 3);
+  );
 
 const experiences = await getCollection("experience");
 const sortedExperiences = experiences.sort(
@@ -44,7 +44,7 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
 <BaseLayout title={`${site.name} - Portfolio`} description={site.introduction}>
   <Container>
     <section class="hero">
-      <h1>{site.name}</h1>
+      <h1 class="name">{site.name}</h1>
       <p class="subtitle">{site.title}</p>
       <p class="introduction">{site.introduction}</p>
       {
@@ -222,5 +222,10 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
     .container {
       padding: 0 1rem;
     }
+  }
+
+  .name {
+    font-size: 2rem;
+    font-weight: 700;
   }
 </style>

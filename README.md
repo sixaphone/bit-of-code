@@ -1,62 +1,45 @@
-# Free Minimal Astro Portfolio
+# Personal Portfolio & Blog
 
-A modern, minimalist portfolio website built with Astro and deployed on Cloudflare Pages. Features a collection of writings, projects, and professional experiences.
+Welcome to my open-source portfolio! This repository contains a collection of my projects, blog posts, and technical writings that showcase my skills and experiences in software development.
 
-![alt text](image.png)
+## 🚀 Featured Projects
 
-## Overview
+Here you'll find a curated selection of my projects, each demonstrating different aspects of my technical expertise
 
-This is a personal portfolio website for ByteKai, a Software Engineer and Curious Tinkerer. The site showcases blog posts, technical notes, project work, and professional experience in a clean, fast-loading format.
+## ✍️ Blog & Technical Writing
 
+I regularly write about software development, technology trends, and my learning experiences.
 
+## 🛠️ Technologies
 
-## Features
+Here are some of the key technologies and tools I work with:
 
-- 🚀 Built with [Astro](https://astro.build) v5.1
-- ⚡️ Deployed on [Cloudflare Pages](https://pages.cloudflare.com)
-- 📝 Content sections:
-  - Blog posts
-  - Technical notes
-  - Project showcase
-  - Professional experience
-  - Curated bookmarks
-- 🎨 Clean typography with:
-  - Inter
-  - Roboto Mono
-  - Source Sans Pro
-- 🌐 Social presence integration
-- 📱 Fully responsive design
+- Programming Languages: JavaScript
+- Frontend: React, NextJS, Astro, and many more
+- Backend: Express, NestJS
+- Databases: SQL (Postgresql, Mysql), cache (Redis), NoSQL (mongo)
+- Tools & Platforms: GitHub, AWS, Docker, K9
 
-## Tech Stack
+## 📫 Get in Touch
 
-- **Framework**: [Astro](https://astro.build) 5.1.2
-- **Deployment**: Cloudflare Pages
-- **Fonts**: 
-  - @fontsource/inter
-  - @fontsource/roboto-mono
-  - @fontsource/source-sans-pro
+- LinkedIn: https://linkedin.com/in/mirsad-halilcevic
+- Twitter: @sixaphone__
+- Email: mirsad@meta5.io
 
-## Development
+## 🤝 Contributing
 
-### Prerequisites
+This portfolio is open-source, and if you like it you can fork it and use it for yourself. All you need to do is
 
-- Node.js (Latest LTS version recommended)
-- npm or pnpm
+1. Clone the repo
+2. Delete the .git
+3. Create a new .git with `git init`
+4. Make your changes
+5. Commit your changes (`git commit -am 'Add some improvement'`)
+6. Deploy (You can use Netlify - I did)
 
-### Local Development
+## 📄 License
 
-1. Clone the repository
-2. Run `pnpm install` to install dependencies
-3. Run `pnpm dev` to start the development server
-4. Open your browser and navigate to `http://localhost:4321` to view the site
+This project is licensed under the Apache License License - see the [LICENSE](LICENSE) file for details.
 
-## License
-
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Astro](https://astro.build)
-- [Fontsource](https://fontsource.org)
-- [Tailwind CSS](https://tailwindcss.com)
-
+---
+Made with ❤️ by Mirsad Halilcevic
