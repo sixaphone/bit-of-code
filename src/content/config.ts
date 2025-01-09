@@ -50,6 +50,7 @@ const site = defineCollection({
   schema: z.object({
     name: z.string(),
     title: z.string(),
+    author: z.string(),
     introduction: z.string(),
     sections: z.object({
       blog: z.object({
