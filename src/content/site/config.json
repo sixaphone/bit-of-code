@@ -30,6 +30,10 @@
       {
         "platform": "LinkedIn",
         "url": "https://linkedin.com/in/mirsad-halilcevic"
+      },
+      {
+        "platform": "Mail",
+        "url": "mailto:mirsad@meta5.io"
       }
     ]
   }
